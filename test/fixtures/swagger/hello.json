@@ -87,6 +87,64 @@
 					]
 				}
 			]
+		},
+		{
+			"path": "/greetings",
+			"description": "The collection of greetings",
+			"operations":[
+				{
+					"method": "GET",
+					"summary": "Greetings collection",
+					"nickname": "getGreetings",
+					"type": "string",
+					"responseMessages": [
+						{
+							"code": 403,
+							"message": "Access Denied"
+						},
+						{
+							"code": 400,
+							"message": "Invalid query",
+							"responseModel": "Error"
+						},
+						{
+							"code": 200,
+							"message": "Successful query"
+						}
+					],
+					"parameters":[]
+				},
+				{
+					"method": "POST",
+					"summary": "Greetings",
+					"nickname": "createGreeting",
+					"type": "string",
+					"responseMessages": [
+						{
+							"code": 403,
+							"message": "Access Denied"
+						},
+						{
+							"code": 400,
+							"message": "Invalid query",
+							"responseModel": "Error"
+						},
+						{
+							"code": 201,
+							"message": "Successful create"
+						}
+					],
+					"parameters":[
+						{
+							"name": "body",
+							"type": "object",
+							"paramType": "body",
+							"description": "greeting",
+							"required": true
+						}
+					]
+				}
+			]
 		}
 	]
 }
