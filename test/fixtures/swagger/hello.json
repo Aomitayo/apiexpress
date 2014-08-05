@@ -141,6 +141,12 @@
 							"paramType": "body",
 							"description": "greeting",
 							"required": true
+						},
+						{
+							"name": "greetings",
+							"type": "File",
+							"paramType": "File",
+							"description": "A file of greetings"
 						}
 					]
 				}
